@@ -16,7 +16,13 @@ jobs:
       install: skip
       before_script:
 <<<<<<< HEAD
+<<<<<<< HEAD
         chmod 777 gradlew
+=======
+        - mysql -uroot < databases/tracker/create_databases.sql
+        - curl https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/5.1.1/flyway-commandline-5.1.1-linux-x64.tar.gz | tar xvz
+        - flyway-*/flyway -url="jdbc:mysql://localhost:3306/tracker_test" -locations=filesystem:databases/tracker -user=tracker -password= clean migrate
+>>>>>>> d921f90... Add task for migrating databases
 =======
         - mysql -uroot < databases/tracker/create_databases.sql
         - curl https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/5.1.1/flyway-commandline-5.1.1-linux-x64.tar.gz | tar xvz
