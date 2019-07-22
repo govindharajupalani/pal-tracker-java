@@ -1,7 +1,5 @@
 package io.pivotal.pal.tracker;
 
-import com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +10,6 @@ import java.util.Map;
 @RestController
 public class EnvController
 {
-
     private String m_Port;
     private String m_MemLimit;
     private String m_Index;
@@ -39,10 +36,5 @@ public class EnvController
 
         return env;
     }
-
-
-
-
-
 
 }

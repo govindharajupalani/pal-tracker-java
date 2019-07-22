@@ -14,11 +14,12 @@ public class WelcomeController {
     @Autowired
     private Environment env;
 
+    /*
     WelcomeController(@Value("${welcome.message}") String welmsg )
     {
         welcome_message = welmsg;
     }
-
+    */
     @GetMapping("/")
     public String sayHello() {
         return  env.getProperty("WELCOME_MESSAGE");
